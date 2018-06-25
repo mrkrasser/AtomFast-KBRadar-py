@@ -1,17 +1,18 @@
    
 # Считываем данные с портативного дозиметра AtomFast (Bluetooth Low Energy)
 
-
-```$ ./AtomFast-KBRadar.py
+```
+$ ./AtomFast-KBRadar.py
 Connecting...
 Intencity AVG:0.18 μSv/h CURRENT:0.18 μSv/h
 Temperature: 23℃
 Battery: 65%
----```
+---
+```
  
 ```
-#> sudo hcitool lescan 
-#> gatttool -I -b 38:d2:69:b9:84:01
+$ sudo hcitool lescan 
+$ gatttool -I -b 38:d2:69:b9:84:01
 [LE]> connect
 [LE]> char-write-cmd 0x0027 0100
 Notification handle = 0x0025 value: 00 06 bc bf 3e 66 13 34 3e 10 00 41 1a 
