@@ -7,7 +7,7 @@
 from bluepy import btle
 import struct
 
-MAC_ADDR = '38:d2:69:b9:84:01'
+MAC_ADDR = 'A8:10:87:22:40:40'
 
 
 class MyDelegate(btle.DefaultDelegate):
@@ -29,6 +29,7 @@ class MyDelegate(btle.DefaultDelegate):
         avg_intencity = sum(arr) / len(arr)
         print(u'Intencity AVG:{:4.2} \u03BCSv/h CURRENT:{:4.2} \u03BCSv/h'.format(avg_intencity, curr_intensity))
         print(u'Dose: {:6.4} mSv'.format(struct.unpack('<f', data[1:5])[0]))
+        print(u'CPS last 2 seconds: {}'.format(struct.unpack('<H', data[9:11])[0]))
         print(u'Temperature: {}\u2103'.format(data[12]))
         print(u'Battery: {}%'.format(data[11]))
         print('---')
