@@ -4,10 +4,11 @@
 ```
 $ ./AtomFast-KBRadar.py
 Connecting...
-Intencity AVG:0.18 μSv/h CURRENT:0.18 μSv/h
-Temperature: 23℃
-Battery: 65%
----
+Intencity AVG:0.078 μSv/h CURRENT:0.078 μSv/h
+Dose:  2.993 mSv
+CPS last 2 seconds: 10
+Temperature: 25℃
+Battery: 44%
 ```
  
 ```
